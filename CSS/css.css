@@ -1,0 +1,146 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #E8EAE6;
+    --color2: #CDD0CB;
+    --color3: #CFDAC8;
+    --color4: #7C9473;
+    --color5: #9E9D89;
+    --color6: #424642;
+    --color7: #536162;
+    --color8: #F6F6F6;
+    --font1: 15px;
+    --font2: 20px;
+    --font3: 25px;
+    --font4: 30px;
+    --alignment: center;
+}
+
+
+/* --------------------------------------------------- */
+
+.header,
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color1);
+    color: var(--color6);
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 300px;
+    flex-direction: column;
+    line-height: 50px;
+}
+
+.container {
+    display: relative;
+}
+
+.logo {
+    width: 160px;
+    display: absolute;
+    border: 1px solid var(--color6);
+    border-radius: 8px;
+    font-size: var(--font3);
+    text-align: var(--alignment);
+    background-color: var(--color7);
+    color: var(--color1);
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color7);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--color1);
+    width: 70px;
+    line-height: 50px;
+    font-size: var(--font2);
+}
+
+.navigation a:hover {
+    background-color: var(--color1);
+    color: var(--color7);
+}
+
+
+/* ---------------------------------------------------------------- */
+
+.content {
+    display: flex;
+}
+
+.image {
+    background-color: var(--color7);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.column1,
+.column2 {
+    padding: 10px;
+}
+
+.column1 {
+    flex: 25%;
+    background-color: var(--color8);
+}
+
+.column1 .image {
+    height: 100px;
+    margin-bottom: 7px;
+}
+
+.column2 {
+    flex: 75%;
+}
+
+.column2 .image {
+    height: 200px;
+}
+
+h2 {
+    font-size: var(--font3);
+}
+
+p {
+    font-size: var(--font2);
+}
+
+
+/* ------------------------------------------------- */
+
+@media screen and (max-width:600px) {
+    .navigation {
+        flex-direction: column;
+    }
+    .navigation a {
+        width: 100%;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .column1,
+    .column2 {
+        flex: 100%;
+    }
+    .logo {
+        width: 100px;
+        font-size: var(--font2);
+    }
+}
